@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 envs.sh
-
+.vscode
 postgres/
 pgadmin/
