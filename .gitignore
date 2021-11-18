@@ -132,3 +132,5 @@ envs.sh
 .vscode
 postgres/
 pgadmin/
+
+.vscode
