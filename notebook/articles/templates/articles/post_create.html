@@ -1,7 +1,9 @@
 {% extends 'index/base.html' %}
 {% load static %}
 
-
+{% block title %}
+<title>Создание поста</title>
+{% endblock %}
 {% block style %}
 
 <style>
@@ -25,7 +27,20 @@
             <div class="blog_content">
                 <form action="" method="post">
                     {% csrf_token %}
-                    {{ form }}
+                    {{ form.non_field_errors }}
+                    {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                    {% endfor %}
+
+                    {% for field in form.visible_fields %}
+                    {% for error in field.errors%}
+                    <div class="alert alert-secondary" role="alert">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {{ field.label_tag }} {{ field }}
+                    {% endfor %}
+
                     <input type="submit" class="btn btn-orange" value="Ok"></input>
                 </form>
 

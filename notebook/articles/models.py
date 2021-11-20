@@ -8,7 +8,7 @@ from django.template.defaultfilters import slugify
 class Post(models.Model):
     title = models.CharField(max_length=255, blank=False, null=False)
     slug = models.SlugField(max_length=255, unique=True, null=False,
-                            db_index=True, verbose_name='Title')
+                            db_index=True, verbose_name='Заголовок')
     post_content = models.TextField(blank=False)
     categoryes = models.ManyToManyField('Category', related_name='Categoryes')
 
@@ -26,3 +26,6 @@ class Post(models.Model):
 
 class Category(models.Model):
     category_name = models.CharField(blank=False, max_length=255)
+
+    def __str__(self) -> str:
+        return self.category_name
