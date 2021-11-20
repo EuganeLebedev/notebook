@@ -10,6 +10,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=255, unique=True, null=False,
                             db_index=True, verbose_name='Title')
     post_content = models.TextField(blank=False)
+    categoryes = models.ManyToManyField('Category', related_name='Categoryes')
 
     def save(self, *args, **kwargs) -> None:
         if not self.slug:
