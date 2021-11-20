@@ -41,7 +41,7 @@
        }
 
 
-       .description{
+    .description{
         position: absolute;
         top: 30%;
         margin: auto;
@@ -119,4 +119,17 @@
        }
        .blog .card-body{
         padding: 1em;
+       }
+
+       .btn-orange {
+        background-color:#F97300;
+        color: #ccc;
+        border-color: #F97300;
+        width: 5rem;
+        margin-top: 1rem;
+       }
+
+       .btn-orange:hover {
+        background-color:#ccc;
+        color: #F97300;
        }
