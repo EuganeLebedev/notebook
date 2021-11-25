@@ -14,7 +14,9 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    {% block title %}
     <title>Hello, world!</title>
+    {% endblock %}
     {% block style %}
     {% endblock %}
 </head>
