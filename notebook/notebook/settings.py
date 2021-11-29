@@ -26,6 +26,8 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+if DEBUG:
+    INTERNAL_IPS = ('127.0.0.1', 'localhost')
 
 ALLOWED_HOSTS = []
 
@@ -42,6 +44,8 @@ INSTALLED_APPS = [
     'index.apps.IndexConfig',
     'articles.apps.ArticlesConfig',
     'users.apps.UsersConfig',
+    "debug_toolbar",
+
 ]
 
 MIDDLEWARE = [
@@ -52,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'notebook.urls'

@@ -7,6 +7,9 @@ from django.db.models.deletion import PROTECT
 class Category(models.Model):
     category = models.CharField(blank=False, null=False, max_length=64)
 
+    def regards_count(self):
+        return self.regards_set.count()
+
     def __str__(self) -> str:
         return self.category
 

@@ -3,7 +3,10 @@
     <h1 class="text-center">Portfolio</h1>
     <div class="container">
         {% for category in categoryes %}
+        {% if category.regards_count > 0 %}
         <h2>{{ category.category }}</h2>
+        {% endif %}
+
         <div class="row">
             {% for image in category.regards_set.all %}
             <div class="col-lg-4 col-md-4 col-sm-12">

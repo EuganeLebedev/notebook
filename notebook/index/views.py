@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from index.models import Regards, Category
+from django.db.models import Count
 
 # Create your views here.
 
