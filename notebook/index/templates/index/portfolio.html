@@ -3,7 +3,12 @@
     <h1 class="text-center">Portfolio</h1>
     <div class="container">
         <div class="row">
+            {% for img in regards_images %}
             <div class="col-lg-4 col-md-4 col-sm-12">
+                <img align="center" src="{{ img.regard_image.url }}" class="img-fluid">
+            </div>
+            {% endfor %}
+            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
                 <img align="center" src="images/portfolio/port13.png" class="img-fluid">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
@@ -29,7 +34,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <img align="center" src="images/portfolio/port8.png" class="img-fluid">
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
