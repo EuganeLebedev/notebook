@@ -2,13 +2,23 @@
 <div class="portfolio">
     <h1 class="text-center">Portfolio</h1>
     <div class="container">
+        {% for category in categoryes %}
+        <h2>{{ category.category }}</h2>
         <div class="row">
-            {% for img in regards_images %}
+            {% for image in category.regards_set.all %}
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img align="center" src="{{ image.regard_image.url }}" class="img-fluid">
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- {% for img in regards_images %}
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <img align="center" src="{{ img.regard_image.url }}" class="img-fluid">
             </div>
-            {% endfor %}
-            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
+            {% endfor %} -->
+        <!-- <div class="col-lg-4 col-md-4 col-sm-12">
                 <img align="center" src="images/portfolio/port13.png" class="img-fluid">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
@@ -35,6 +45,6 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <img align="center" src="images/portfolio/port8.png" class="img-fluid">
             </div> -->
-        </div>
+
     </div>
 </div>
