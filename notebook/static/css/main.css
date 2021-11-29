@@ -148,14 +148,18 @@ html,h1,h2,h3,h4,h5,h6,a{
        /*Portfolio*/
 .portfolio{
     margin: 4em 0;
-       position: relative; 
+    position: relative; 
    }
-   .portfolio h1{
+.portfolio h1{
     color:#F97300;
     margin: 2em; 
    }
-   .portfolio img{
+.portfolio img{
      height: 90%;
      width: 70%;
      margin: 1em;
+   }
+.portfolio h2{
+    color:#F97300 ;
+    margin: 2em; 
    }
