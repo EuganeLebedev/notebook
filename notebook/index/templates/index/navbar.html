@@ -1,7 +1,7 @@
 <!--<nav class="navbar navbar-expand-lg fixed-top "> -->
 <div class="container">
     <nav class="navbar navbar-expand-lg fixed-top ">
-        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="{% url 'index:index' %}">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                         Визитная карточка
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Мои достижения</a>
+                        <a class="dropdown-item" href="{% url 'index:regards' %}">Мои достижения</a>
                         <a class="dropdown-item" href="#">Успехи моих учеников</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Повышение квалификации</a>

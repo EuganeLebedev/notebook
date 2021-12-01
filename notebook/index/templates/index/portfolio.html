@@ -1,6 +1,6 @@
 <!-- portfolio -->
 <div class="portfolio">
-    <h1 class="text-center">Portfolio</h1>
+    <h1 class="text-center">Дипломы</h1>
     <div class="container">
         {% for category in categoryes %}
         {% if category.regards_count > 0 %}
@@ -8,6 +8,7 @@
             {% endif %}
 
             <div class="row">
+
                 {% for image in category.regards_set.all %}
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <img align="center" src="{{ image.regard_image.url }}" class="img-fluid">
@@ -15,39 +16,5 @@
                 {% endfor %}
             </div>
             {% endfor %}
-
-            <!-- {% for img in regards_images %}
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="{{ img.regard_image.url }}" class="img-fluid">
-            </div>
-            {% endfor %} -->
-            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port13.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port1.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port6.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port3.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port11.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/electric.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/Classic.jpg" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port1.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img align="center" src="images/portfolio/port8.png" class="img-fluid">
-            </div> -->
-
     </div>
 </div>
